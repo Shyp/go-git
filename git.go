@@ -131,3 +131,19 @@ func CurrentBranch() (string, error) {
 	}
 	return strings.TrimSpace(string(result)), nil
 }
+
+// Tip returns the SHA of the given Git branch. If the empty string is
+// provided, defaults to HEAD on the current branch.
+func Tip(branch string) (string, error) {
+	if branch == "" {
+		branch = "HEAD"
+	}
+	result, err := exec.Command("git", "rev-parse", "--short", branch).CombinedOutput()
+	if err != nil {
+		if strings.Contains(string(result), "Needed a single revision") {
+			return "", fmt.Errorf("git: Branch %s is unknown, can't get tip", branch)
+		}
+		return "", err
+	}
+	return strings.TrimSpace(string(result)), nil
+}

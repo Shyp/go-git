@@ -81,7 +81,10 @@ var remoteTests = []struct {
 
 func TestParseRemoteURL(t *testing.T) {
 	for _, tt := range remoteTests {
-		remote := ParseRemoteURL(tt.remote)
+		remote, err := ParseRemoteURL(tt.remote)
+		if err != nil {
+			t.Fatal(err)
+		}
 		if remote == nil {
 			t.Fatalf("expected ParseRemoteURL(%s) to be %v, was nil", tt.remote, tt.expected)
 		}

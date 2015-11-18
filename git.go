@@ -68,8 +68,8 @@ func getPathAndRepoName(pathAndRepo string) (string, string) {
 }
 
 // ParseRemoteURL takes a git remote URL and returns an object with its
-// component parts.
-func ParseRemoteURL(remoteURL string) *RemoteURL {
+// component parts, or an error if the remote cannot be parsed
+func ParseRemoteURL(remoteURL string) (*RemoteURL, error) {
 	match := sshExp.FindStringSubmatch(remoteURL)
 	if len(match) > 0 {
 		path, repoName := getPathAndRepoName(match[3])
@@ -82,7 +82,7 @@ func ParseRemoteURL(remoteURL string) *RemoteURL {
 
 			Format:  SSHFormat,
 			SSHUser: match[1],
-		}
+		}, nil
 	}
 	match = httpsExp.FindStringSubmatch(remoteURL)
 	if len(match) > 0 {
@@ -105,9 +105,9 @@ func ParseRemoteURL(remoteURL string) *RemoteURL {
 			Port:     port,
 
 			Format: HTTPSFormat,
-		}
+		}, nil
 	}
-	return nil
+	return nil, fmt.Errorf("Could not parse %s as a git remote", remoteURL)
 }
 
 // RemoteURL returns a Remote object with information about the given Git
@@ -119,7 +119,7 @@ func GetRemoteURL(remoteName string) (*RemoteURL, error) {
 	}
 	// git response includes a newline
 	remote := strings.TrimSpace(string(rawRemote))
-	return ParseRemoteURL(remote), nil
+	return ParseRemoteURL(remote)
 }
 
 // CurrentBranch returns the name of the current Git branch. Returns an error

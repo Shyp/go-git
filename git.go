@@ -7,6 +7,8 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+
+	"github.com/github/hub/commands"
 )
 
 type GitFormat int
@@ -130,6 +132,16 @@ func CurrentBranch() (string, error) {
 		return "", err
 	}
 	return strings.TrimSpace(string(result)), nil
+}
+
+// GetPullRequestURL creates a PR on Github and returns the URL
+// of the newly created PR. Returns an error
+// if you are not on a branch, or if you are not in a git repository.
+func GetPullRequestURL(title string) error {
+	cmd := commands.CmdRunner.Lookup("pull-request")
+	args := commands.NewArgs([]string{"pull-request", "-m", title, "-o"})
+	execError := commands.CmdRunner.Call(cmd, args)
+	return execError.Err
 }
 
 // Tip returns the SHA of the given Git branch. If the empty string is

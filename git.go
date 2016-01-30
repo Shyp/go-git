@@ -134,10 +134,9 @@ func CurrentBranch() (string, error) {
 	return strings.TrimSpace(string(result)), nil
 }
 
-// GetPullRequestURL creates a PR on Github and returns the URL
-// of the newly created PR. Returns an error
-// if you are not on a branch, or if you are not in a git repository.
-func GetPullRequestURL(title string) error {
+// CreateAndOpenPullRequest creates a PR on Github and opens it up in your browser
+// Returns an error if you are not on a branch, or if you are not in a git repository.
+func CreateAndOpenPullRequest(title string) error {
 	cmd := commands.CmdRunner.Lookup("pull-request")
 	args := commands.NewArgs([]string{"pull-request", "-m", title, "-o"})
 	execError := commands.CmdRunner.Call(cmd, args)

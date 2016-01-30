@@ -1,0 +1,10 @@
+dependencies:
+  override:
+    - rm -rf "$HOME/src/github.com/Shyp/go-git"
+    - mkdir -p "$HOME/src/github.com/Shyp"
+    - cp -r "$HOME/go-git" "$HOME/src/github.com/Shyp/go-git"
+    - make install
+
+test:
+  override:
+    - make test

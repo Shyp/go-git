@@ -137,6 +137,7 @@ func CurrentBranch() (string, error) {
 // CreateAndOpenPullRequest creates a PR on Github and opens it up in your browser
 // Returns an error if you are not on a branch, or if you are not in a git repository.
 func CreateAndOpenPullRequest(title string) error {
+	fmt.Printf("yo go %s\n")
 	cmd := commands.CmdRunner.Lookup("pull-request")
 	args := commands.NewArgs([]string{"pull-request", "-F", ".git/COMMIT_EDITMSG", "-o"})
 	execError := commands.CmdRunner.Call(cmd, args)

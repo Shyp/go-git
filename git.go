@@ -138,7 +138,7 @@ func CurrentBranch() (string, error) {
 // Returns an error if you are not on a branch, or if you are not in a git repository.
 func CreateAndOpenPullRequest(title string) error {
 	cmd := commands.CmdRunner.Lookup("pull-request")
-	args := commands.NewArgs([]string{"pull-request", "-m", title, "-o"})
+	args := commands.NewArgs([]string{"pull-request", "-F", ".git/COMMIT_EDITMSG", "-o"})
 	execError := commands.CmdRunner.Call(cmd, args)
 	return execError.Err
 }

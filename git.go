@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Shyp/go-git/Godeps/_workspace/src/github.com/github/hub/commands"
+	"github.com/github/hub/commands"
 )
 
 type GitFormat int

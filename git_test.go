@@ -12,6 +12,12 @@ func TestCurrentBranch(t *testing.T) {
 	fmt.Println(len(result))
 }
 
+func TestRoot(t *testing.T) {
+	result, err := Root()
+	fmt.Println(err)
+	fmt.Println(result)
+}
+
 var remoteTests = []struct {
 	remote   string
 	expected RemoteURL

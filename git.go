@@ -1,6 +1,7 @@
 package git
 
 import (
+	"errors"
 	"fmt"
 	"log"
 	"os/exec"
@@ -169,4 +170,15 @@ func Tip(branch string) (string, error) {
 		return "", err
 	}
 	return strings.TrimSpace(string(result)), nil
+}
+
+// Root returns the root directory of the current Git repository, or an error
+// if you are not in a git repository.
+func Root() (string, error) {
+	result, err := exec.Command("git", "rev-parse", "--show-toplevel").CombinedOutput()
+	trimmed := strings.TrimSpace(string(result))
+	if err != nil {
+		return "", errors.New(trimmed)
+	}
+	return strings.TrimSpace(trimmed), nil
 }

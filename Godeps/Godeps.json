@@ -1,18 +1,84 @@
 {
-	"ImportPath": "github.com/Shyp/go-git",
-	"GoVersion": "go1.5.3",
+	"ImportPath": "github.com/shyp/go-git",
+	"GoVersion": "go1.6",
 	"Packages": [
 		"./..."
 	],
 	"Deps": [
 		{
-			"ImportPath": "github.com/BurntSushi/toml",
-			"Comment": "v0.1.0-23-g5c4df71",
-			"Rev": "5c4df71dfe9ac89ef6287afc05e4c1b16ae65a1e"
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/BurntSushi/toml",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
 		},
 		{
-			"ImportPath": "github.com/fhs/go-netrc/netrc",
-			"Rev": "4422b68c9c934b03e8e53ef18c8c8714542def7e"
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/fhs/go-netrc/netrc",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/howeyc/gopass",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/inconshreveable/go-update",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/jingweno/go-sawyer",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/jtacoma/uritemplates",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/kardianos/osext",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/kballard/go-shellquote",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/kr/binarydist",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/mattn/go-colorable",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/mattn/go-isatty",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/octokit/go-octokit/octokit",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/github.com/ogier/pflag",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/golang.org/x/crypto/ssh/terminal",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
+		},
+		{
+			"ImportPath": "github.com/github/hub/Godeps/_workspace/src/gopkg.in/yaml.v1",
+			"Comment": "v2.2.2",
+			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
 		},
 		{
 			"ImportPath": "github.com/github/hub/cmd",
@@ -48,61 +114,6 @@
 			"ImportPath": "github.com/github/hub/version",
 			"Comment": "v2.2.2",
 			"Rev": "7bb188862940bdba26c0eeee7df2f7d1086f3e80"
-		},
-		{
-			"ImportPath": "github.com/howeyc/gopass",
-			"Rev": "2c70fa70727c953c51695f800f25d6b44abb368e"
-		},
-		{
-			"ImportPath": "github.com/inconshreveable/go-update",
-			"Rev": "68f5725818189545231c1fd8694793d45f2fc529"
-		},
-		{
-			"ImportPath": "github.com/jingweno/go-sawyer",
-			"Rev": "1999ae5763d678f3ce1112cf1fda7c7e9cf2aadf"
-		},
-		{
-			"ImportPath": "github.com/jtacoma/uritemplates",
-			"Comment": "0.1-16-g802b8e2",
-			"Rev": "802b8e24dbf0f556badb3a1401a49f6bfda80ca6"
-		},
-		{
-			"ImportPath": "github.com/kardianos/osext",
-			"Rev": "29ae4ffbc9a6fe9fb2bc5029050ce6996ea1d3bc"
-		},
-		{
-			"ImportPath": "github.com/kballard/go-shellquote",
-			"Rev": "d8ec1a69a250a17bb0e419c386eac1f3711dc142"
-		},
-		{
-			"ImportPath": "github.com/kr/binarydist",
-			"Rev": "9955b0ab8708602d411341e55fffd7e0700f86bd"
-		},
-		{
-			"ImportPath": "github.com/mattn/go-colorable",
-			"Rev": "51a7e7a8b1665b25ca173debdc8d52d493348f15"
-		},
-		{
-			"ImportPath": "github.com/mattn/go-isatty",
-			"Rev": "56b76bdf51f7708750eac80fa38b952bb9f32639"
-		},
-		{
-			"ImportPath": "github.com/octokit/go-octokit/octokit",
-			"Comment": "v0.4.0-97-g6909930",
-			"Rev": "69099306b45af55301f9328f52d48338274f8d7d"
-		},
-		{
-			"ImportPath": "github.com/ogier/pflag",
-			"Comment": "v0.0.1-7-g45c278a",
-			"Rev": "45c278ab3607870051a2ea9040bb85fcb8557481"
-		},
-		{
-			"ImportPath": "golang.org/x/crypto/ssh/terminal",
-			"Rev": "bfc286917c5fcb7420d7e3092b50bbfd31b38a98"
-		},
-		{
-			"ImportPath": "gopkg.in/yaml.v1",
-			"Rev": "9f9df34309c04878acc86042b16630b0f696e1de"
 		}
 	]
 }
